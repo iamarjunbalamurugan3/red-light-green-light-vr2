@@ -1,14 +1,49 @@
-input.onButtonPressed(Button.A, function on_button_pressed_a() {
-    strip.showColor(neopixel.colors(NeoPixelColors.Red))
+input.onButtonPressed(Button.A, function () {
+    for (let index = 0; index < 50; index++) {
+        strip.showColor(neopixel.colors(NeoPixelColors.Red))
+        basic.pause(200)
+        strip.showColor(neopixel.colors(NeoPixelColors.Yellow))
+        basic.pause(200)
+        strip.showColor(neopixel.colors(NeoPixelColors.Green))
+        basic.pause(200)
+        strip.showColor(neopixel.colors(NeoPixelColors.Blue))
+        basic.pause(200)
+        strip.showColor(neopixel.colors(NeoPixelColors.Indigo))
+        basic.pause(200)
+        strip.showColor(neopixel.colors(NeoPixelColors.Violet))
+        basic.pause(200)
+        strip.showColor(neopixel.colors(NeoPixelColors.White))
+        basic.pause(100)
+        strip.showColor(neopixel.colors(NeoPixelColors.Purple))
+        basic.pause(200)
+        strip.showColor(neopixel.colors(NeoPixelColors.Orange))
+    }
 })
-input.onButtonPressed(Button.B, function on_button_pressed_b() {
-    strip.showColor(neopixel.colors(NeoPixelColors.Green))
+input.onButtonPressed(Button.B, function () {
+    for (let index = 0; index < 50; index++) {
+        strip.showColor(neopixel.colors(NeoPixelColors.Red))
+        basic.pause(200)
+        strip.showColor(neopixel.colors(NeoPixelColors.Yellow))
+        basic.pause(200)
+        strip.showColor(neopixel.colors(NeoPixelColors.Green))
+        basic.pause(100)
+        strip.showColor(neopixel.colors(NeoPixelColors.Blue))
+        basic.pause(100)
+        strip.showColor(neopixel.colors(NeoPixelColors.Indigo))
+        basic.pause(500)
+        strip.showColor(neopixel.colors(NeoPixelColors.Violet))
+        basic.pause(100)
+        strip.showColor(neopixel.colors(NeoPixelColors.White))
+        basic.pause(200)
+        strip.showColor(neopixel.colors(NeoPixelColors.Purple))
+        basic.pause(500)
+        strip.showColor(neopixel.colors(NeoPixelColors.Orange))
+        basic.pause(100)
+    }
 })
-input.onLogoEvent(TouchButtonEvent.Pressed, function on_logo_pressed() {
-    strip.showColor(neopixel.colors(NeoPixelColors.White))
-})
-let strip : neopixel.Strip = null
+let strip: neopixel.Strip = null
 strip = neopixel.create(DigitalPin.P0, 13, NeoPixelMode.RGB)
-basic.forever(function on_forever() {
-    strip.setBrightness(50)
+strip.setBrightness(100)
+basic.forever(function () {
+    music.setBuiltInSpeakerEnabled(true)
 })
